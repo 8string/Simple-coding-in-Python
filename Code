@@ -132,7 +132,7 @@ print("The new series of sign is: ",a)
 print("The number of deleted signs is:",br)
 
 
-#10
+#10 Simple filter
 a=input("Enter a row of signs: ")
 suma=0
 i=0
@@ -143,4 +143,32 @@ while i<len(a)-1:
     else:
         i+=1
 print("The sum of recognized double digit numbers is: ",suma)
+
+
+##11 Simple calculus
+def funk(x,y):
+    try:
+        if x>0 and y>0:
+            R=(x/(y**2))**(1/3)
+            return R
+        else:
+            return "You have entered the wrong values."        
+    except:
+        return "There has been an exception."
+
+
+#12 Simple calculus pt.2
+def volSt(a,b):
+    try:
+        if a>0 and b>0:
+            from math import pi
+            V=(1/3*pi*(a**2)*b)
+            return V
+        else:
+            return "You have entered the wrong values."        
+    except:
+        return "There has been an exception."
+
+
+
     
