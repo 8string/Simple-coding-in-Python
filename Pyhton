@@ -1,0 +1,14 @@
+lista=["Ana Anic", "Marko Markic", "Iva Ivic", "Tomo Tomic"]
+br=4
+while True:
+    ise=input("Enter the name of the villager that has gone away: ")
+    if ise=="End":
+       break
+    if ise=="Ana Anic" or ise=="Marko Markic" or ise=="Iva Ivic" or ise=="Tomo Tomic":
+        lista.remove(ise)
+        br-=1
+    else:
+        print(ise,"is not a part of this village.")
+print("There is",br,"people left in the village. They are: ")
+for clan in lista:
+    print(clan)
