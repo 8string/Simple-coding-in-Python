@@ -35,7 +35,7 @@ else:
     print("The one: ",x%10)
 
 
-#4 Divisable
+#4 Divisible
 x=input("Enter a number: ")
 if int(x)<0 or int(x)<10 or int(x)>99:
     print("Wrong entry.")
