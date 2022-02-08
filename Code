@@ -58,7 +58,8 @@ else:
         print(int(x),"and",int(x4),"are the same.")
     else:
         print(int(x),"and",int(x4),"are not the same.")
-        
+       
+       
 #6 List with negatives
 lista=[]
 zadnji=""
@@ -94,6 +95,7 @@ print("There is",br,"people left in the village. They are: ")
 for clan in lista:
     print(clan)
 
+
 #8 Odd and even numbers
 A=[]
 B=[]
@@ -115,3 +117,30 @@ for parni in A:
 print("Odd numbers are: ")
 for neparni in B:
     print(neparni)
+    
+    
+#9 Sign removal
+a=input("Enter a row of signs: ")
+br=0
+for x in a:
+    if x.isalpha() or x.isdigit():
+        continue 
+    else:
+        a=a.replace(x,"")
+        br=br+1
+print("The new series of sign is: ",a)
+print("The number of deleted signs is:",br)
+
+
+#10
+a=input("Enter a row of signs: ")
+suma=0
+i=0
+while i<len(a)-1:
+    if a[i:i+2].isdigit():
+        suma+=int(a[i:i+2])
+        i+=2
+    else:
+        i+=1
+print("The sum of recognized double digit numbers is: ",suma)
+    
