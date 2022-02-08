@@ -1,0 +1,117 @@
+#1 Simple sum/product
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+c=int(input("Enter the third number: "))
+if a==b==c:
+    print("All three numbers are equal.")
+elif a%2==0 and b%2!=0 and c%2!=0:
+    print("The Sum is:",a+b+c)
+elif a<10 and b<10 and c<10:
+    print("The product is:",a*b*c)
+else:
+    print("End.")
+
+
+#2 Square sum
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+c=int(input("Enter the third number: "))
+if a==b or b==c or a==c:
+    if (a+b+c)**2%2==0:
+        print("The square sum is even.")
+    elif (a+b+c)**2%2!=0:
+        print("The square sum is not even.")
+else:
+    print("There are none.")
+        
+
+#3 Hundred/Tenner/The one
+x=int(input("Enter a number: "))
+if x<100 or x>999:
+    print("Wrong entry.")
+else:
+    print("Hundred: ",x//100)
+    print("Tenner: ",x%100//10)
+    print("The one: ",x%10)
+
+
+#4 Divisable
+x=input("Enter a number: ")
+if int(x)<0 or int(x)<10 or int(x)>99:
+    print("Wrong entry.")
+else:
+    if int(x[0])%int(x[1])==0:
+        print(int(x[0]),"is divisible with",int(x[1]))
+    elif int(x[0])%int(x[1])!=0:
+        print(int(x[0]),"is not divisible with",int(x[1]))
+
+    
+#5 Simple comparison
+x=float(input("Enter a number: "))
+if x<9.99 or x>99.99:
+    print("Wrong entry.")
+else:
+    x2=x%1
+    x3=round(x2,2)
+    x4=x3*100
+    if int(x)==int(x4):
+        print(int(x),"and",int(x4),"are the same.")
+    else:
+        print(int(x),"and",int(x4),"are not the same.")
+        
+#6 List with negatives
+lista=[]
+zadnji=""
+while True:
+    x=int(input("Enter a number: ")
+    if x==zadnji:
+        break
+    else:
+        lista.append(x)
+        zadnji=x
+print()
+brn=0
+for x in lista:
+    print(x)
+    if x<0:
+        brn+=1
+print("Negatives:",brn)
+
+
+#7 Listing of villagers
+lista=["Ana Anic", "Marko Markic", "Iva Ivic", "Tomo Tomic"]
+br=4
+while True:
+    ise=input("Enter the name of the villager that has gone away: ")
+    if ise=="End":
+       break
+    if ise=="Ana Anic" or ise=="Marko Markic" or ise=="Iva Ivic" or ise=="Tomo Tomic":
+        lista.remove(ise)
+        br-=1
+    else:
+        print(ise,"is not a part of this village.")
+print("There is",br,"people left in the village. They are: ")
+for clan in lista:
+    print(clan)
+
+#8 Odd and even numbers
+A=[]
+B=[]
+while True:
+    x=int(input("Enter a number: "))
+    if x==0:
+        break
+    if x<0:
+        print("Wrong entry.")
+        continue
+    if x%2==0:
+        A.append(x)
+    if x%2!=0:
+        B.append(x)
+print()
+print("Even numbers are: ")
+for parni in A:
+    print(parni)
+print("Odd numbers are: ")
+for neparni in B:
+    print(neparni)
